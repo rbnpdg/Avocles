@@ -19,8 +19,7 @@ COORD CursorPosition;
 int pipa[3];
 int lubang[3];
 int pipeFlag[3];
-char burung[2][6] = { '/','-','-','o','\\',' ',
-					'|','_','_','_',' ','>' };
+char burung[2][6] = { '/','-','-','o','\\',' ','|','_','_','_',' ','>' };
 int birdPos = 6;
 int skor = 0;
 
