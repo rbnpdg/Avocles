@@ -1,3 +1,9 @@
+/* 
+Nama Anggota kelompok
+1. Adiska Bayu Saputra (2257051034)
+2. Lira Septiyani (2217051151)
+3. Ruben Pandega Aditama (2217051085)
+ */
 #include <iostream>
 #include <conio.h>
 #include <dos.h>
