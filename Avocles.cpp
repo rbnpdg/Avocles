@@ -1,3 +1,5 @@
+#include <iostream>
+#include <conio.h>
 #include <dos.h>
 #include <stdlib.h>
 #include <string.h>
