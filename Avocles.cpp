@@ -4,19 +4,16 @@ Nama Anggota kelompok
 2. Lira Septiyani (2217051151)
 3. Ruben Pandega Aditama (2217051085)
  */
-#include <iostream>
-#include <conio.h>
-#include <dos.h>
-#include <stdlib.h>
-#include <string.h>
-#include <windows.h>
+#include <iostream>	//library untuk cout
+#include <conio.h> 	//library untuk getch()
+#include <windows.h>	//library untuk
 #include <time.h>
 
 #define lebarlayar 100
 #define tinggilayar 26
 #define lebarwindow 75
 #define lebarmenu 30
-#define GAP_SIZE 7
+#define ukuranlubang 7
 #define PIPE_DIF 45
 
 using namespace std;
