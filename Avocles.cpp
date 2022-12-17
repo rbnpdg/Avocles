@@ -21,7 +21,7 @@ COORD CursorPosition; //untuk mengatuk posisi objek (digunakan dalam fungsi goto
 
 int pipa[3];		//definisi pipa
 int lubang[3];		//definisi lubang pipa
-int masukpipa[3];
+int pipajalan[3];
 char burung[2][6] = { '/','-','-','o','\\',' ','|','_','_','_',' ','>' }; //definisi karakter burung
 int posisiburung = 1;
 int skor = 0;
@@ -56,7 +56,7 @@ void tampilPipa(int ind) { //fungsi utk menampilkan pipa, rand() untuk mengacak 
 	lubang[ind] = 3 + rand()%20; 
 }
 void buatPipa(int ind){ //generate pipa
-	if( masukpipa[ind] == true ){
+	if( pipajalan[ind] == true ){
 		for(int i = 0; i < lubang[ind]; i++){ 
 			gotoxy(lebarwindow - pipa[ind],i + 1); 
 			cout << "==="; 
@@ -69,7 +69,7 @@ void buatPipa(int ind){ //generate pipa
 }
 
 void hapusPipa(int ind){ //menghapus pipa ketika sudah dilewati burung
-	if( masukpipa[ind] == true ){
+	if( pipajalan[ind] == true ){
 		for(int i = 0; i < lubang[ind]; i++){ 
 			gotoxy(lebarwindow - pipa[ind], i + 1); 
 			cout << "   "; 
@@ -125,8 +125,8 @@ void mulai(){ //fungsi ketika mulai game
 	
 	posisiburung = 6;
 	skor = 0;
-	masukpipa[0] = 1; 
-	masukpipa[1] = 0;
+	pipajalan[0] = 1; 
+	pipajalan[1] = 0;
 	pipa[0] = pipa[1] = 4;
 	
 	system("cls"); 
@@ -175,21 +175,21 @@ void mulai(){ //fungsi ketika mulai game
 			return;
 		}
 		
-		if( masukpipa[0] == 1 )
+		if( pipajalan[0] == 1 )// pergerakan game
 			pipa[0] += 2;
 		
-		if( masukpipa[1] == 1 )
+		if( pipajalan[1] == 1 )//pergerakan game
 			pipa[1] += 2;
 		
 		if( pipa[0] >= 40 && pipa[0] < 42 ){
-			masukpipa[1] = 1;
+			pipajalan[1] = 1;
 			pipa[1] = 4;
 			tampilPipa(1);
 		}
-		if( pipa[0] > 68 ){
+		if( pipa[0] > 68 ){ //update skor
 			skor++;
 			updateskor();
-			masukpipa[1] = 0;
+			pipajalan[1] = 0;
 			pipa[0] = pipa[1];
 			lubang[0] = lubang[1];
 		}
