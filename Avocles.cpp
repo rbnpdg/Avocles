@@ -116,7 +116,7 @@ void gameover() {  //tampilan ketika gameover
 	gotoxy(42,13); cout << "Press any key to go back to menu.";
 	getch();
 }
-void updateskor(){  //fungsi untuk menjalankan skor
+void updateskor(){  //fungsi untuk menampilkan skor
 	gotoxy(lebarwindow + 8, 7);
 	cout << "Skor : " << skor << endl;
 }
