@@ -17,7 +17,7 @@ Nama Anggota kelompok 11
 using namespace std;
  
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-COORD CursorPosition;
+COORD CursorPosition; //untuk mengatuk posisi objek (digunakan dalam fungsi gotoxy)
 
 int pipa[3];		//definisi pipa
 int lubang[3];		//definisi lubang pipa
@@ -52,7 +52,7 @@ void border(){
 	}
 }
 
-void tampilPipa(int ind) { //menampilkan pipa, rand() untuk mengacak area lubang yang akan dilewati burung
+void tampilPipa(int ind) { //fungsi utk menampilkan pipa, rand() untuk mengacak area lubang yang akan dilewati burung
 	lubang[ind] = 3 + rand()%20; 
 }
 void buatPipa(int ind){ //generate pipa
