@@ -6,7 +6,7 @@ Nama Anggota kelompok 11
  */
 
 #include <iostream>		//lib untuk cout
-#include <conio.h>		//lib untuk getche
+#include <conio.h>		//lib untuk getch
 #include <windows.h>	//lib untuk clearscreen dgn system("cls") dan set kecepatan game Sleep()
 
 #define lebarlayar 100		//definisi lebar layar saat bermain
@@ -213,7 +213,7 @@ int main()
 		gotoxy(48,11); cout<<"Tekan 1 untuk mulai";
 		gotoxy(48,12); cout<<"Tekan 2 untuk keluar";	 
 		gotoxy(48,13); cout<<"";
-		char op = getche();
+		char op = getch();
 		
 		if( op=='1') mulai();	//ketika ketik 1, maka game mulai
 		else if( op=='2') exit(0);  //ketika ketik 2, maka keluar
@@ -222,3 +222,4 @@ int main()
 	
 	return 0;
 }
+	
